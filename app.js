@@ -2,7 +2,8 @@ const express = require('express');
 const _ = require('lodash');
 const app = express();
 
-const ta = _.sample(['Giorgio','Gabi','Juan','Teo','Diego'])
+const ta = _.sample(['Giorgio','Gabi','Juan','Teo','Diego']);
+console.log(`This server is running for ${ta}`)
 app.get('/',(req,res) => res.json({selectedTa:ta}))
 
 
