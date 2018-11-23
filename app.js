@@ -4,8 +4,9 @@ const app = express();
 
 const ta = _.sample(['Giorgio','Gabi','Juan','Teo','Diego']);
 console.log(`This server is running for ${ta}`)
+
 app.get('/',(req,res) => res.json({selectedTa:ta}))
 
 
 const port = process.env.PORT || 3000;
-app.listen(port,() => console.log(`Ready on port ${port}`));
+app.listen(port, () => console.log(`Ready on port ${port}`));
